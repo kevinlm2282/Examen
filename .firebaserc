@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "proyecto-b3c04": {
+      "hosting": {
+        "tarea1": [
+          "proyecto-b3c04"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "proyecto-b3c04"
+  }
+}

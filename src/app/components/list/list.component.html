@@ -1,0 +1,37 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <span class="h3">Listado de Viajes programados</span>
+            <button class="btn btn-dark btn-lg float-right" routerLink="/createViajes">Agregar</button>
+            <table class="table table-striped mt-5">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Origen</th>
+                        <th>Destino</th>
+                        <th>Hotel</th>
+                        <th>Paquete</th>
+                        <th>Costo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let viaje of viajes">
+                        <td>{{viaje.nombre}}</td>
+                        <td>{{viaje.apellido}}</td>
+                        <td>{{viaje.origen}}</td>
+                        <td>{{viaje.destino}}</td>
+                        <td>{{viaje.hotel}}</td>
+                        <td>{{viaje.paquete}}</td>
+                        <td>{{viaje.costo | currency}}</td>
+                        <td>
+                            <i class="fas fa-edit fa-lg text-info mr-2" [routerLink]="['/editViaje/', viaje.id]"></i>
+                            <i (click)="eliminarViaje(viaje.id)" class="fas fa-trash-alt fa-lg text-danger"></i>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
